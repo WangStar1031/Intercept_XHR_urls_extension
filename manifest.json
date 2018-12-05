@@ -1,0 +1,17 @@
+{
+	"name": "Remove ads",
+	"version": "1.0",
+	"description": "Remove all Google ads",
+	"manifest_version": 2,
+
+	"permissions": ["tabs", "http://*/*", "https://*/*", "webNavigation"],
+
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": ["<all_urls>"],
+			"js": ["contentScript.js"]
+		}
+	]
+
+}
