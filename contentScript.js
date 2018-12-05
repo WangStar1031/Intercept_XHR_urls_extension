@@ -8,8 +8,8 @@ strScript += 'XHR.prototype.open = function(method, url, async, user, pass) {';
 strScript += 'this._url = url;';
 strScript += 'open.call(this, method, url, async, user, pass);';
 strScript += 'console.log( "open url : " + url);';
+strScript += 'console.log( "open url method : " + method);';
 strScript += '};';
-
 strScript += '})(XMLHttpRequest);';
 
 var timer = setInterval(function(){
