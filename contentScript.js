@@ -1,14 +1,14 @@
 
 var strScript = 'var func = (function(XHR) {';
-strScript += '  "use strict";';
+strScript += '"use strict";';
 
-strScript += '  var open = XHR.prototype.open;';
+strScript += 'var open = XHR.prototype.open;';
 
-strScript += '  XHR.prototype.open = function(method, url, async, user, pass) {';
-strScript += '    this._url = url;';
-strScript += '    open.call(this, method, url, async, user, pass);';
-strScript += '    console.log( "open url : " + url);';
-strScript += '  };';
+strScript += 'XHR.prototype.open = function(method, url, async, user, pass) {';
+strScript += 'this._url = url;';
+strScript += 'open.call(this, method, url, async, user, pass);';
+strScript += 'console.log( "open url : " + url);';
+strScript += '};';
 
 strScript += '})(XMLHttpRequest);';
 
